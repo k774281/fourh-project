@@ -1,0 +1,104 @@
+body {
+    --search-form-padding-block: 1rem;
+    --search-form-padding-inline: 2rem;
+}
+
+[lang="zh-Hant"] {
+    --input-submit-right-space: 13rem;
+}
+
+[lang="en"] {
+    --input-submit-right-space: 20rem;
+}
+
+@media screen and (max-width: 1330px) {
+    #search_form {
+        --input-submit-right-space: 6rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #search_form {
+        --input-submit-right-space: 2rem;
+    }
+}
+
+#top-search #search_form {
+    display: grid;
+    grid-template-columns: calc(100% - var(--input-submit-right-space));
+    inset: 0 0 auto;
+    padding: var(--search-form-padding-block) var(--search-form-padding-inline);
+    background-color: white;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+
+    &:is(#top-search #search_form) {
+        height: auto !important;
+    }
+
+    .form-control {
+        background: no-repeat left bottom / 100% 2px linear-gradient(to right, var(--gray-nav), var(--green-selection));
+    }
+
+    [type="submit"] {
+        background-color: var(--green-selection);
+        text-align: center;
+        padding: 0.5rem 1.25rem;
+        position: absolute;
+        top: var(--search-form-padding-block);
+        right: calc(var(--input-submit-right-space) + var(--search-form-padding-inline));
+        height: auto;
+        color: white;
+        border-radius: 0.5rem;
+
+        &:hover {
+            background-color: var(--green-default);
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        [type="submit"] {
+            position: static;
+            margin-block: var(--search-form-padding-block) !important;
+        }
+    }
+
+    >div {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+        row-gap: var(--search-form-padding-block);
+
+        &>* {
+            width: fit-content;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        a {
+            &::after {
+                content: '/';
+                position: absolute;
+                transform: translateX(100%);
+                color: var(--gray-nav);
+                font-size: 0.9em;
+                opacity: 0.25;
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+
+            &:is(#search_form a) {
+                margin: 0 2rem 0 0 !important
+            }
+        }
+
+        @media screen and (max-width:1200px) {
+            a {
+                position: static
+            }
+        }
+    }
+}

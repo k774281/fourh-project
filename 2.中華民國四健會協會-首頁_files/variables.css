@@ -1,0 +1,34 @@
+:root{
+    --si-sticky: 100;
+    --header-wrap: 199;
+    --green-selection: #00964a;
+    --green-default: #698a38;
+    --green-default-light: color-mix( in srgb, var(--green-default) 60%, var(--green-aside));
+    --green-dark: #546e2d;
+    --green-borderColor: rgba(105, 138, 56, 0.3);
+    --green-aside: #d2dcc3;
+    --green-taiwanMap: #a2c56c;
+    --gray-aside: #666;
+    --gray-breadcrumb: #555;
+    --gray-nav: #444;
+    --gray-borderColor: #d5d6d4;
+    --gray-hover: #f9f9f9;
+    --color-blue1: #3B5998;
+    --color-button: #C02942;
+    --red-text: #990000;
+    --red-focus: #f82626;
+    --box-shadow: 0 0 7px rgba(55, 51, 51, 0.15);
+    --outlone: 2px solid var(--red-focus);
+    --outline: 2px solid var(--red-focus);
+    --fs-h2: 40px;
+    --fs-title: 2.143em;
+    --fs-h3: 1.571em;
+    --fs-li: 22px;
+    --fs-form: 20px;
+    --fs-header: 17px;
+    --fs-default: 16px;
+    --breakpoint-l: 1280px;
+    --breakpoint-m: 992px;
+    --breakpoint-s: 768px;
+    --breakpoint-xs: 480px;
+}

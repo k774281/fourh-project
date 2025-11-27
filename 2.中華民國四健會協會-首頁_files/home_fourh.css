@@ -1,0 +1,641 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/*===============================================
+                 首頁整體設定
+=================================================*/
+
+body {}
+
+#content {}
+
+.content-wrap {
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #content .container {
+        overflow: hidden;
+    }
+}
+
+
+/*===============================================
+                  首頁導盲磚區塊
+=================================================*/
+
+#sitemap_center {
+    display: none;
+}
+
+
+/*===============================================
+                  首頁banner區塊
+=================================================*/
+
+#index_banner {
+    width: 100%;
+    display: inline-block;
+}
+
+
+/*首頁banner區塊-圓點樣式*/
+
+#index_banner .owl-dot span {
+    border: #698a38 2px solid;
+    opacity: 0.9;
+}
+
+#index_banner .active span {
+    background-color: #698a38 !important;
+    opacity: 1;
+}
+
+
+/*===============================================
+                  第一內容區塊
+=================================================*/
+
+#home_main_0 {
+    padding: 50px 0px;
+    background-color: #fff;
+    padding-bottom: 0;
+}
+
+#home_main_0 .container {}
+
+
+/*===============================================
+               首頁文字宣導區塊
+=================================================*/
+
+
+/*首頁文字宣導區塊-標題文字樣式*/
+
+.home-text h2 {
+    font-size: 35px;
+    color: #698a38;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin-bottom: 10px;
+}
+
+
+/*首頁文字宣導區塊-內文樣式*/
+
+.home-text p {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+
+.home-text p span {
+    color: #698a38;
+}
+
+.home-text #more_box {
+    display: none;
+}
+
+
+/*===============================================
+                  第二內容區塊
+=================================================*/
+
+#home_main_1 {
+    padding: 40px 0;
+    padding-top: 15px;
+}
+
+
+/*===============================================
+                 最新消息區塊
+=================================================*/
+
+
+/*最新消息區塊-主標題區塊*/
+
+.home-news .title {
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.home-news .title:before {
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: #698a38;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: 0;
+}
+
+
+/*最新消息區塊-主標題樣式*/
+
+.home-news .title h2 {
+    font-size: 33px;
+    color: #698a38;
+    margin: 0;
+    padding: 0 15px;
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+.home-news .title span {
+    font-size: 17px;
+    color: #333;
+    font-weight: bold;
+    display: block;
+}
+
+
+/*最新消息區塊-頁籤區塊*/
+
+.home-news .nav-tabs {
+    border-bottom: 0px solid #eac7ab;
+    margin-bottom: 25px;
+}
+
+.home-news .nav.nav-tabs li {}
+
+
+/*最新消息區塊-頁籤樣式*/
+
+.home-news .nav-tabs>li>a {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 15px;
+    border-radius: 0;
+}
+
+.home-news .nav>li>.news_tab:hover,
+.home-news .nav>li>.news_tab:focus,
+.home-news .nav-tabs>li>.news_tab.active,
+.home-news .nav-tabs>li>.news_tab:hover,
+.home-news .nav-tabs>li>.news_tab:focus {
+    color: #698a44;
+    background-color: #fff;
+    border: 1px solid #698a44;
+}
+
+.home-news .content .nav-tabs>li>.sub_tab {
+    border: 0px solid #dddddd !important;
+    padding: 0 !important;
+}
+
+
+/*最新消息區塊-列表樣式*/
+
+.home-news #list-box {
+    padding: 35px 0;
+    border-bottom: 1px dashed #698a38;
+}
+
+
+/*最新消息區塊-文字區塊樣式*/
+
+.home-news #text-box {
+    padding-left: 32px;
+}
+
+
+/*最新消息區塊-小標題樣式*/
+
+.home-news #text-box h3 {
+    margin-bottom: 10px;
+}
+
+.home-news #text-box h3 a {
+    font-size: 21px;
+    color: #698a38;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.home-news #text-box h3 a:hover {
+    color: #000;
+}
+
+
+/*最新消息區塊-內文樣式*/
+
+.home-news #text-box p {
+    height: 110px;
+    font-size: 20px;
+    color: #666;
+    overflow: hidden;
+    margin: 0;
+}
+
+
+/*最新消息區塊-日期區塊樣式*/
+
+.home-news .group {
+    width: 107px;
+    height: 107px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    border: 1px solid #698a38;
+    border-radius: 50%;
+}
+
+.home-news .group::before {
+    width: 107px;
+    height: 1px;
+    content: '';
+    background-color: #698a38;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+}
+
+
+/*最新消息區塊-日期文字樣式*/
+
+.home-news .group .year {
+    font-size: 13px;
+    color: #698a38;
+    padding: 7px 0;
+}
+
+.home-news .group .year:after {
+    content: '公告時間';
+    display: block;
+}
+
+.home-news .group .date {
+    font-size: 23px;
+    color: #3d3834;
+    padding-top: 5px;
+}
+
+
+/*最新消息區塊-更多資訊區塊*/
+
+.home-news #more_box {
+    text-align: center;
+}
+
+
+/*最新消息區塊-更多按鈕樣式*/
+
+.home-news #more-box a {
+    font-size: 18px;
+    color: #698a38;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #fff;
+}
+
+.home-news #more-box a:hover {
+    border-color: #698a38;
+}
+
+.home-news #more-box a:before {
+    content: '〔';
+}
+
+.home-news #more-box a:after {
+    content: '〕';
+}
+
+@media (min-width: 992px) {
+    .home-news .nav-tabs {
+        text-align: right;
+    }
+    .home-news .nav.nav-tabs li {
+        float: none;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home-news #day-box {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .home-news .title {
+        margin-bottom: 35px;
+    }
+    .home-news .nav-tabs {
+        margin-bottom: 0px;
+    }
+    /*最新消息區塊-頁籤樣式*/
+    .home-news .nav.nav-tabs li {
+        width: 33.3%;
+        margin-bottom: 2px;
+    }
+    .home-news .nav-tabs>li>a {
+        font-size: 17px;
+        padding: 15px;
+    }
+    .home-news .tab-content li a {
+        display: block;
+    }
+    .home-news #list-box {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: 15px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-news #day-box {
+        margin-bottom: 25px;
+    }
+    .home-news .group {
+        margin: auto;
+    }
+    .home-news #text-box {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /*最新消息區塊-頁籤樣式*/
+    .home-news .nav.nav-tabs li {
+        width: 100%;
+    }
+}
+
+
+/*===============================================
+                  第三內容區塊
+=================================================*/
+
+#home_main_2 {
+    padding: 40px 0;
+    background-image: url(../images/home-archives-bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+
+/*===============================================
+                   活動與訓練區塊
+=================================================*/
+
+
+/*活動與訓練區塊-文字區塊*/
+
+.home-archives #text-box {
+    font-size: 21px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+
+/*活動與訓練區塊-標題樣式*/
+
+.home-archives #text-box h2 {
+    font-size: 35px;
+    color: #fff;
+    letter-spacing: 2.4px;
+}
+
+.home-archives #text-box h2 span {
+    font-size: 19px;
+    color: #fff;
+    display: block;
+}
+
+
+/*活動與訓練區塊-內文樣式*/
+
+.home-archives p {
+    font-size: 20px;
+}
+
+
+/*活動與訓練區塊-更多按鈕樣式*/
+
+.home-archives .button {
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.home-archives .button:hover {
+    background-color: transparent;
+    border-color: #fff !important;
+}
+
+.home-archives .button i {
+    font-size: 1em;
+}
+
+
+/*活動與訓練區塊-更多資訊區塊*/
+
+.home-archives #more_box {
+    display: none;
+}
+
+@media (min-width: 1330px) {
+    .home-archives #text-box {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .home-archives {
+        text-align: center;
+    }
+    .home-archives #video-box {
+        margin-bottom: 0 !important;
+    }
+}
+
+
+/*===============================================
+                  第四內容區塊
+=================================================*/
+
+#home_main_3 {
+    padding: 80px 0;
+    background-image: url(../images/home-album-bg.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1200px) {
+    #home_main_3 {
+        padding: 25px 0;
+        padding-bottom: 55px;
+    }
+}
+
+
+/*===============================================
+                  四建相簿區塊
+=================================================*/
+
+
+/*四建相簿區塊-主標題樣式*/
+
+.home-album .title h2 {
+    font-size: 35px;
+    color: #698a38;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+}
+
+.home-album .title span {
+    font-size: 20px;
+    color: #000;
+    letter-spacing: 3px;
+}
+
+
+/*四建相簿區塊-小標題樣式*/
+
+.home-album #title_box h3 {
+    height: 62px;
+    font-size: 21px;
+    color: #698a38;
+    overflow: hidden;
+}
+
+.home-album .portfolio-desc h3 span {
+    color: #fff;
+    display: initial;
+}
+
+
+/*四建相簿區塊-更多資訊區塊*/
+
+.home-album .main_more {
+    padding: 20px 0px;
+}
+
+.home-album .title .more {
+    font-size: 17px;
+    color: #666;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #698a38;
+}
+
+.home-album .title p {
+    font-size: 20px;
+}
+
+
+/*四建相簿區塊-各相簿更多按鈕*/
+
+.home-album .content .more {
+    font-size: 15px;
+    font-weight: normal;
+    background-color: #698a38;
+    border: 1px solid #698a38;
+    border-radius: 8px;
+}
+
+.home-album .content .more:hover {
+    color: #698a38;
+    text-shadow: none;
+    background-color: #fff !important;
+}
+
+.home-album .content .more i {
+    background: none;
+}
+
+
+/*四建相簿區塊-圖片遮罩區塊*/
+
+.home-album .portfolio-overlay {
+    background-color: rgba(105, 138, 56, 0.5);
+}
+
+
+/*四建相簿區塊-圓點按鈕樣式*/
+
+.home-album .owl-carousel .owl-dots .owl-dot span {
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    color: #999;
+    padding: 0 0.5rem 0.5rem;
+    background-color: transparent;
+    opacity: 1;
+    border-radius: 0;
+}
+
+.home-album .owl-carousel .owl-dots .owl-dot.active span {
+    color: #698a38;
+    border-bottom: 1px solid #698a38;
+}
+
+@media (min-width: 1201px) {
+    /*四建相簿區塊-主標題區塊*/
+    .home-album .title {
+        width: 21%;
+        padding-right: 50px;
+        float: left;
+        position: relative;
+    }
+    /*四建相簿區塊-輪播區塊*/
+    .home-album .content {
+        width: 79%;
+        float: left;
+        border-left: 1px solid #7c7c7c;
+        padding-left: 30px;
+    }
+    /*四建相簿區塊-圓點按鈕區塊*/
+    .home-album .owl-dots {
+        position: absolute;
+        left: -235px;
+        bottom: -15px;
+    }
+}
+
+@media (max-width: 1579px) and (min-width: 1201px) {
+    .home-va .title h2 {
+        font-size: 22px;
+    }
+    .home-va .more {
+        left: 36px;
+    }
+}
+
+@media (max-width: 1200px) {
+    /*四建相簿區塊-主標題區塊*/
+    .home-album .title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .home-album .more {
+        text-align: center !important;
+        display: block;
+    }
+}
+
+
+/* 220623 SHUYA 新增 start */
+
+.home-news .group .year:after {
+    content: attr(title);
+}
+
+
+/* 220623 SHUYA 新增 end */
