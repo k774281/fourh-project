@@ -5519,7 +5519,6 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay {
 #portfolio-navigation a:hover {
     color: #1ABC9C;
 }
-
 #portfolio-ajax-show #portfolio-navigation {
     top: 0;
     margin-top: 0;
@@ -16391,3 +16390,35 @@ body:not(.no-transition) #wrapper,
 /* 230201 SHUYA upload Start */
 .dl-list2>dd{margin-bottom:0;}.btn-style4{display:inline-flex;padding:0 1.5rem;line-height:1.5;background:#ffb549;color:#E53B2C;border:1px solid #ffb549;border-radius:.5rem;white-space:nowrap;font-size:.9em;box-shadow:0 0 .1rem 0 rgba(255,181,73,1);transition:.25s}.btn-style4:hover{background-color:#F67C1A;color:white;box-shadow:0 0 .15rem .25rem rgba(255,181,73,.75)}.btn-style4:focus{outline-color:transparent!important}.btn-style4:active{transform:translateY(2px);background-color:tomato}.btn-style4[class*="icon-"]{display:inline-flex}.btn-style4[class*="icon-"]::before{font-size:.85em;align-self:flex-end;color:rgba(255,255,255,.5);margin-left:.25rem;order:1}.dl-list4>dt>.icon{position:relative}.dl-list4>dt>.icon::before{position:relative;z-index:2;font-size:.9em;transform:rotate(-5deg);display:inline-block;margin-right:.75rem;filter:hue-rotate(2deg) brightness(1.05)}.dl-list4>dt>.icon::after{content:'';position:absolute;top:.5rem;left:.33rem;width:1em;height:1em;background-color:#ddd;border-radius:50%}.dl-list4>dt>div{color:#006632;}.dl-list4>dd{display:flex;flex-wrap:wrap;margin:1rem 0;margin-left:-1rem}.dl-list4 dd>.dl-list5{width:calc(100% / 3 - 1rem);margin-left:1rem}.dl-list5{border:1px solid #A8E5C9;border-radius:1rem;margin:0 0 1.5rem;overflow:hidden;box-shadow:0 0 0 rgba(0,0,0,.5);transition:.25s}.dl-list5>dt{margin:0;margin-bottom:.5rem;padding:0;display:flex;background-color:rgba(168,229,201,.75)}.dl-list5>dd{margin:0 1rem;padding:.5rem 0;color:#666;font-size:1.4rem;border-bottom:1px dashed #A8E5C9}.dl-list5>dd:last-child{border-bottom:none}.dl-list5>dd>span{display:list-item;margin-left:1.25em}.dl-list5:hover{box-shadow:.125rem .125rem .5rem rgba(0,0,0,.2)}.dl-list5:has(.label-style2:active){transform:scale(.975);box-sizing:none;background-color:#ffffe5}.dl-list5>dt .label-style2{flex-grow:1;padding:1rem}.label-style2{display:flex;cursor:pointer;margin:0}.label-style2 input{pointer-events:none;border:none;background:transparent}.label-style2 .order,.label-style2 .order[value=""]{border-radius:50%;width:1.5em;height:1.5em;line-height:1.5em;text-align:center;margin-right:.5rem;padding:0;transition:.25s}.label-style2 .order[value]{background:#00964a;color:white}.label-style2:has(.order[value]){pointer-events:none}.label-style2:has(.order[value=""]){pointer-events:unset}.label-style2 .order,.label-style2 .order[value=""]{color:transparent;background:white;border:1px dashed #00964a}.label-style2 input:focus{outline-color:transparent!important}.label-style2:hover .order,.label-style2:hover .order[value=""]{box-shadow:0 0 .1rem .5rem rgba(0,255,123,.25)}.label-style2:hover .order[value]{box-shadow:none}@media (max-width:991px){.dl-list4 dd>.dl-list5{width:100%}}
 /* 230201 SHUYA upload End */
+
+/* 25 彥如 add */
+.bi-list::before{
+    font-weight: 700 !important;
+    font-size: 2rem !important;
+}
+
+.bi-search::before{
+    font-weight: 900 !important;
+    line-height: 0 !important;
+}
+.bi-caret-down-fill::before{
+    font-weight: 700 !important;
+    line-height: 0 !important;
+}
+#top-search a i{
+    top: -2px;
+}
+
+#primary-menu ul li>a i{
+    top: 1px;
+}
+.icon-angle-right::before,.icon-angle-left::before{
+    font-family: "bootstrap-icons";
+    font-style: normal;
+}
+.icon-angle-right::before{
+    content: "\F285";
+}
+.icon-angle-left::before{
+    content: "\F284";
+}
