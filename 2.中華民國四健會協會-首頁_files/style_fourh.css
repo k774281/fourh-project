@@ -16438,6 +16438,8 @@ body:not(.no-transition) #wrapper,
     position: absolute;
 }
 .milestone-title {
+    width: 300px;
+    margin: auto;
     color: #698A38;
     font-size: 2.5rem;
     letter-spacing: 2px;
@@ -16449,8 +16451,8 @@ body:not(.no-transition) #wrapper,
     content: "";
     position: absolute;
     top: 1.4rem;
-    right: 12rem;
-    width: 250px;
+    right: 0;
+    width: 80px;
     height: 1px;
     background: #698A38;
 }
@@ -16458,13 +16460,13 @@ body:not(.no-transition) #wrapper,
     content: "";
     position: absolute;
     top: 1.4rem;
-    left: 12rem;
-    width: 250px;
+    left: 0;
+    width: 80px;
     height: 1px;
     background: #698A38;
 }
 .milestone-sub {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: #777;
     letter-spacing: 4px;
@@ -16472,17 +16474,22 @@ body:not(.no-transition) #wrapper,
 }
 
 .milestone-section .cards{
-    width: 588px;
+    width: 300px;
     margin: auto;
 }
+
 .milestone-card {
     height: 216px;
     background: white;
     border-radius: 6px;
     transition: .3s;
     padding: 2rem;
+    margin: 3rem 0;
 }
-
+.milestone-card h3{
+    font-size:2.5rem;
+    margin: 0;
+}
 .milestone-card p{
     margin: 0;
     font-size: 1.5rem;
@@ -16494,18 +16501,28 @@ body:not(.no-transition) #wrapper,
 }
 
 .milestone-card .icon img {
-    width: 55px;
+    width: 100px;
 }
 .home_main_1 .tabs,
 .home_main_2 .tabs,
 .age-wrapper .tabs{
     display: flex;
     justify-content: center;
-    gap: 1.125rem;
-    margin: 1.5rem 0 2.5rem;
+    margin: 1.5rem auto 2.5rem;
     list-style: none;
+    padding: 1rem 0 2rem 0;
+    border-bottom: 1px solid #698A38;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.home_main_1 .tabs,
+.age-wrapper .tabs{
+    width: 50%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin; 
 }
 .home_main_1 .tab-btn,
+.home_main_2 .tab-btn,
 .age-wrapper .tab-btn{
     padding: 0.5rem 1.25rem;
     border-radius: 1.875rem;
@@ -16513,9 +16530,22 @@ body:not(.no-transition) #wrapper,
     font-size: 2rem;
     cursor: pointer;
     transition: .3s;
+    white-space: nowrap;
 }
-.home_main_1 .tab-btn.active,
-.home_main_1.tab-btn:hover,
+.home_main_1 .tab-btn::-webkit-scrollbar{
+    height: 6px;
+}
+.home_main_1 .tab-btn::-webkit-scrollbar-track{
+    background: #f0f0f0; 
+    border-radius: 3px;
+}
+.home_main_1 .tab-btn::-webkit-scrollbar-thumb{
+    background: #bbb;
+    border-radius: 3px;
+}
+.age-wrapper .tab-btn,
+.home_main_1 .tabs .tab-btn.active,
+.home_main_1 .tab-btn:hover,
 .age-wrapper .tab-btn:hover,
 .age-wrapper .tab-btn.active{
     background:#4F6D32;
@@ -16534,7 +16564,7 @@ body:not(.no-transition) #wrapper,
     text-align:left;
 }
 .home_main_1 .news-grid{    
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3, 1fr);
 }
 
 /* Cards */
@@ -16549,7 +16579,6 @@ body:not(.no-transition) #wrapper,
 }
 .home_main_1 .thumb{
     width: 20%;
-    height:70px;
     border-radius:3px
 }
 .home_main_1 .info{
@@ -16560,11 +16589,12 @@ body:not(.no-transition) #wrapper,
     color:#698A38;
     margin-bottom: 0.3rem;
     overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 .home_main_1 .info span{
-    font-size: 1rem;
+    font-size: 1.5rem;
     color:#888
 }
 .home_main_1 .info p{
@@ -16576,7 +16606,7 @@ body:not(.no-transition) #wrapper,
     overflow: hidden;
     -webkit-box-orient: vertical;
 }
-.home_main_1 .more-btn{
+.more-btn{
     background:#fff;
     border:1px solid #698A38;
     color: #698A38;
@@ -16586,19 +16616,16 @@ body:not(.no-transition) #wrapper,
     cursor:pointer;
     transition: all .3s;
 }
-.home_main_1 .more-btn:hover{
+.more-btn:hover{
     background:#4F6D32;
     color:#fff
 }
 
 /* RWD */
-@media(max-width:992px){.home_main_1 .news-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.home_main_1 .news-grid{grid-template-columns:1fr}}
+@media(max-width:1200px){.home_main_1 .news-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:767px){.home_main_1 .news-grid{grid-template-columns:1fr}}
 
-.home_main_2 .tabs li img{
-    width: 218px;
-    height: 229px;
-}
+
 .home_main_2 .tab-btn{
     padding: 0.5rem 1.25rem;
     color: #4F6D32;
@@ -16607,6 +16634,7 @@ body:not(.no-transition) #wrapper,
     transition: .3s;
     text-align: center;
     display: block;
+    white-space: nowrap;
 }
 .home_main_2 .tab-btn.active,.tab-btn:hover{
     color: #4F6D32;
@@ -16690,11 +16718,18 @@ body:not(.no-transition) #wrapper,
     text-align: left;
 }
 
+.age-wrapper .myAgesSwiper{
+    margin: 0 0 6rem 0;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
     color: #444;
 }
 
+.reflectionSwiper{
+    padding: 2rem;
+}
 .reflectionSwiper .card .pic{
     position: relative;
 }
@@ -16729,18 +16764,17 @@ body:not(.no-transition) #wrapper,
 .reflectionSwiper .next {
     width: 40px;
     height: 62px;
-    background: rgba(161, 161, 161, .8);
+    background: rgba(233, 233, 233);
     position: absolute;
     top: 50%;
-    transform: translateY(-52%);
+    transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
     color: #ffffff;
-    border-radius: 3px;
 }
 .reflectionSwiper .bi {
     font-size: 3rem;
-    line-height: 2;
+    line-height: 1.8;
 }
 
 .reflectionSwiper .prev { left: 0px; }
@@ -16754,8 +16788,80 @@ body:not(.no-transition) #wrapper,
     margin: 0 6px;
     border-radius: 50%;
 }
-
-.reflectionSwiper .swiper-pagination-bullet-active {
+.reflectionSwiper .swiper-pagination-bullet-active,
+.reflectionSwiper .swiper-pagination-bullet:hover {
     background: #fff;
     border: 1px solid #698A38
+}
+
+@media(min-width: 767px){
+    .milestone-section .cards{
+        width: 600px;
+        margin: 2rem auto;
+    }
+    .milestone-card{
+        margin: 3rem 0;
+    }
+    .milestone-card .icon img{
+        width: 55px;
+    }
+    .milestone-title{
+        width: 650px;
+    }
+    .milestone-title::before,
+    .milestone-title::after{
+        width: 250px;
+    }
+    .milestone-card h3{
+        margin: 0 0 2rem 0;
+    }
+}
+@media(min-width: 993px){
+    .milestone-title{
+        width: 800px;
+    }
+    .milestone-title::before,
+    .milestone-title::after{
+        width: 250px;
+    }
+    .milestone-card h3{
+        margin: 0 0 2rem 0;
+    }
+}
+@media(max-width: 1920px){
+    .home_main_1 .tabs{
+        width: 70%;
+    }
+}
+@media(max-width: 1200px){
+    .home_main_1 .tabs{
+        width: 80%;
+    }
+}
+@media(max-width: 993px){
+    .home_main_1 .tabs{
+        width: 100%;
+    }
+}
+@media(max-width: 767px){
+    .home_main_1 .tabs{
+        justify-content: left;
+    }
+    .home_main_2 .tab-btn{
+        font-size: 1.5rem;
+        padding:0;
+    }
+}
+@media(max-width: 680px){
+    .home_main_2 .tabs{
+        flex-wrap: wrap;
+    }
+    .home_main_2 .tabs li{
+        width: 210px;
+    }
+}
+@media(max-width: 480px){    
+    .home_main_2 .tabs li{
+        width: 170px;
+    }
 }
